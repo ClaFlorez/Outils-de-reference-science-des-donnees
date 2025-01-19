@@ -1,4 +1,4 @@
-# outils-de-reference-science-des-donnes
+# Outils de référence en science de données.
 # Comment supprimer des conteneurs et des images Docker 🚀
 
 ## Supprimer les conteneurs 🛑
