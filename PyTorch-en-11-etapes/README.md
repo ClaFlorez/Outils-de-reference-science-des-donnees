@@ -1,3 +1,24 @@
+## Objectifs d'apprentissage
+---
+
+- Comprendre l'implémentation d'un réseau de neurones avec PyTorch
+- Maîtriser les concepts fondamentaux de l'apprentissage profond
+- Développer des compétences pratiques en programmation PyTorch
+
+---
+## - Introduction
+---
+
+Dans ce chapitre, nous allons analyser en détail une implémentation pratique d'un réseau de neurones avec PyTorch. Notre objectif est de créer un modèle capable de prédire les coûts de production d'un produit en fonction de différentes variables d'entrée.
+
+Cette analyse pas à pas nous permettra de :
+- Comprendre comment structurer un projet PyTorch complet
+- Maîtriser les concepts clés comme les DataLoaders et les Datasets
+- Apprendre à implémenter et entraîner un modèle de régression
+- Visualiser et interpréter les résultats
+
+Le code que nous allons étudier utilise des données simulées pour se concentrer sur les aspects techniques plutôt que sur la qualité des données. Cette approche nous permet de nous familiariser avec PyTorch dans un environnement contrôlé avant de passer à des données réelles plus complexes.
+
 ## - Code Complet
 ---
 
