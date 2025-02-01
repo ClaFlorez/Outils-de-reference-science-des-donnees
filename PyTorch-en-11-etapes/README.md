@@ -1,5 +1,5 @@
 ## Objectifs d'apprentissage
----
+
 
 - Comprendre l'implémentation d'un réseau de neurones avec PyTorch
 - Maîtriser les concepts fondamentaux de l'apprentissage profond
@@ -137,9 +137,8 @@ for i, (real, pred) in enumerate(zip(y_sample, predictions)):
 ```
 
 
----
 ## - Points Clés
----
+
 
 1. **Manipulation des Datasets et DataLoaders** : Charger, normaliser et préparer des données pour l'entraînement.
 2. **Définition d'un Modèle** : Créer un modèle avec `nn.Sequential`, ajouter des activations non linéaires.
@@ -147,9 +146,7 @@ for i, (real, pred) in enumerate(zip(y_sample, predictions)):
 4. **Entraînement et Évaluation** : Implémenter des fonctions d'entraînement et d'évaluation robustes.
 5. **Visualisation des Performances** : Utiliser des graphiques pour analyser les pertes et performances du modèle.
 
----
 ##  - Résumé 
----
 
 Dans ce chapitre, nous avons exploré en détail l'implémentation d'un réseau de neurones avec PyTorch pour prédire les coûts de production. Les points essentiels abordés sont :
 
