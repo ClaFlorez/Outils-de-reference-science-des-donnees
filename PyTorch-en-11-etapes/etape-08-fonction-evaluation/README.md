@@ -11,3 +11,4 @@ def evaluate_model(dataloader, model, loss_fn):
             loss = loss_fn(predictions, y_batch)
             total_loss += loss.item()
     return total_loss / len(dataloader)
+```
