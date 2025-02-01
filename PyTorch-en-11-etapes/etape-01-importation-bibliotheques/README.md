@@ -1,3 +1,6 @@
 # Etape 01 Importation Bibliotheques
 
-Contenido de la etapa etape-01-importation-bibliotheques.
+import torch
+from torch import nn, optim, utils, autograd
+import numpy as np
+import matplotlib.pyplot as plt
