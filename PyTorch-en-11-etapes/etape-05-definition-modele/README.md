@@ -17,3 +17,4 @@ class NeuralNetwork(nn.Module):
         return self.model(x)
 
 model = NeuralNetwork()
+```
