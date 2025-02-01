@@ -22,28 +22,71 @@ def evaluate_model(dataloader, model, loss_fn):
 
 ## 🔍 Explication détaillée
 
-1. **Mode Évaluation** : `model.eval()` désactive les couches spécifiques d'entraînement et prépare le modèle pour l'inférence.
+### 1. Mode Évaluation 
 
-2. **Désactivation du calcul des gradients** : `with torch.no_grad():` économise de la mémoire et accélère l'évaluation.
+`model.eval()`
 
-3. **Calcul de la perte** : Les prédictions sont faites et comparées aux vraies valeurs.
+- Désactive les couches spécifiques d'entraînement (dropout, batch normalization)
+- Prépare le modèle pour l'inférence
+- Assure une évaluation cohérente
 
-4. **Métriques supplémentaires** : MAE et MAPE sont calculées pour une évaluation plus complète.
+### 2. Désactivation du calcul des gradients
 
-5. **Accumulation et moyenne** : Les pertes et métriques sont accumulées et moyennées sur tous les lots.
+`with torch.no_grad():`
+
+- Économise de la mémoire
+- Accélère le processus d'évaluation
+- Empêche toute modification des paramètres
+
+### 3. Calcul de la perte
+```python
+   predictions = model(X_batch)
+   loss = loss_fn(predictions, y_batch)
+```
+- Propage les données à travers le modèle
+- Calcule l'erreur sans rétropropagation
+
+### 4. Accumulation de la perte
+
+`total_loss += loss.item()`
+
+- Accumule la perte pour chaque lot
+- Permet de calculer la perte moyenne
+
+### 5. Retour de la perte moyenne
+
+`return total_loss / len(dataloader)`
+
+- Calcule la perte moyenne sur tous les lots
 
 ## ⚠️ Points d'attention
 
-- Toujours utiliser `model.eval()` pour une évaluation cohérente.
-- La désactivation des gradients est essentielle pour l'efficacité.
-- Utiliser diverses métriques pour une évaluation complète.
-
-## 🔄 Variantes et améliorations possibles
-
-- Ajout de métriques spécifiques au domaine.
-- Calcul d'intervalles de confiance.
-- Génération de rapports détaillés ou visualisations.
+- **Cohérence** : Toujours utiliser `model.eval()`
+- **No Gradient** : Essentiel pour l'efficacité
+- **Métriques variées** : Compléter la perte par d'autres indicateurs
 
 ## 🚀 Prochaines étapes
 
-Avec notre fonction d'évaluation définie, nous sommes prêts à passer à l'entraînement complet du modèle et à l'analyse approfondie de ses performances.
+Avec notre fonction d'évaluation définie, nous sommes prêts à passer à l'entraînement complet du modèle et à l'analyse de ses performances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
