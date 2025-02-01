@@ -1,3 +1,8 @@
 # Etape 03 Separation Donnees
 
-Contenido de la etapa etape-03-separation-donnees.
+```python
+# Séparation des données
+train_size = int(0.8 * len(X_data))
+X_train, X_test = X_data[:train_size], X_data[train_size:]
+y_train, y_test = y_data[:train_size], y_data[train_size:]
+
