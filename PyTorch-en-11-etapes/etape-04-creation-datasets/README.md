@@ -35,9 +35,11 @@ test_loader = utils.data.DataLoader(test_dataset, batch_size=32)
 
 ### 2. Méthode d'initialisation
 
-`def __init__(self, X, y):
+```python
+        def __init__(self, X, y):
         self.X = torch.tensor(X, dtype=torch.float32)
-        self.y = torch.tensor(y, dtype=torch.float32).unsqueeze(1)  # Ajouter une dimension`
+        self.y = torch.tensor(y, dtype=torch.float32).unsqueeze(1)  # Ajouter une dimension
+```
 
 - Convertit les données numpy en tenseurs PyTorch.
 - Utilise `dtype=torch.float32` pour assurer la compatibilité avec le modèle.
@@ -51,23 +53,27 @@ test_loader = utils.data.DataLoader(test_dataset, batch_size=32)
 - Utilisé par PyTorch pour déterminer la taille du dataset.
 
 ### 4. Méthode __getitem__
-` def getitem(self, idx):
+```python
+def getitem(self, idx):
 return self.X[idx], self.y[idx]
 text
-`
+```
 - Définit comment accéder à un échantillon spécifique.
 - Retourne une paire (feature, label) pour un index donné.
 
 ### 5. Création des instances de dataset
-`train_dataset = ProductionDataset(X_train, y_train)
+```python
+train_dataset = ProductionDataset(X_train, y_train)
 test_dataset = ProductionDataset(X_test, y_test)
-`
+```
 - Crée des datasets séparés pour l'entraînement et le test.
 
 ### 6. Création des DataLoaders
-`train_loader = utils.data.DataLoader(train_dataset, batch_size=32, shuffle=True)
+```python
+train_loader = utils.data.DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = utils.data.DataLoader(test_dataset, batch_size=32)
-text`
+text
+```
 
 ---
 - `DataLoader` gère le chargement des données par lots.
