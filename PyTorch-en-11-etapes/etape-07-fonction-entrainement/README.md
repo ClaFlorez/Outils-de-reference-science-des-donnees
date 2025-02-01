@@ -13,3 +13,4 @@ def train_model(dataloader, model, loss_fn, optimizer):
         optimizer.step()
         total_loss += loss.item()
     return total_loss / len(dataloader)
+```
