@@ -56,7 +56,6 @@ test_loader = utils.data.DataLoader(test_dataset, batch_size=32)
 ```python
 def getitem(self, idx):
 return self.X[idx], self.y[idx]
-text
 ```
 - Définit comment accéder à un échantillon spécifique.
 - Retourne une paire (feature, label) pour un index donné.
@@ -72,7 +71,6 @@ test_dataset = ProductionDataset(X_test, y_test)
 ```python
 train_loader = utils.data.DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = utils.data.DataLoader(test_dataset, batch_size=32)
-text
 ```
 
 ---
