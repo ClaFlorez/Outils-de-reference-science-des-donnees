@@ -26,7 +26,7 @@ Ce segment de code importe **PyTorch**, **NumPy** et **Matplotlib**.
 ### **Question 1**  
 Pourquoi utilisons-nous PyTorch (`torch`) dans ce projet ?  
 
-:white_check_mark: \_ A. Pour manipuler facilement des **matrices et tenseurs** et entraîner des modèles de deep learning. \_  
+:white_check_mark: A. Pour manipuler facilement des **matrices et tenseurs** et entraîner des modèles de deep learning. \_  
 B. Pour améliorer la vitesse d’entraînement d’un modèle scikit-learn.  
 C. Pour générer automatiquement des jeux de données simulées.  
 D. Pour normaliser les variables d’entrée du modèle.  
@@ -54,7 +54,7 @@ y_data = 3 * X_data[:, 0] + 2 * X_data[:, 1] + 4 * X_data[:, 2] + np.random.rand
 ### **Question 2**  
 Pourquoi utilisons-nous `np.random.seed(42)` et `torch.manual_seed(42)` ?  
 
-A. Pour garantir que **les mêmes données sont générées** à chaque exécution du script.  
+:white_check_mark:A. Pour garantir que **les mêmes données sont générées** à chaque exécution du script.  
 B. Pour réduire la complexité du modèle.  
 C. Pour permettre au modèle de mieux généraliser sur des données inconnues.  
 D. Pour améliorer la précision du modèle.  
@@ -78,7 +78,7 @@ y_train, y_test = y_data[:train_size], y_data[train_size:]
 ### **Question 3**  
 Pourquoi devons-nous séparer les données en **train (80%) et test (20%)** ?  
 
-A. Pour évaluer si le modèle **généralise bien** sur de nouvelles données.  
+:white_check_mark:A. Pour évaluer si le modèle **généralise bien** sur de nouvelles données.  
 B. Pour augmenter la vitesse d’entraînement du modèle.  
 C. Pour éviter d’avoir trop de données dans l’ensemble d’entraînement.  
 D. Pour ajuster les hyperparamètres du modèle en temps réel.  
@@ -117,7 +117,7 @@ test_loader = utils.data.DataLoader(test_dataset, batch_size=32)
 ### **Question 4**  
 Quel est **l’avantage principal** d’utiliser `DataLoader` dans PyTorch ?  
 
-A. Il **charge les données en mémoire par lots** et optimise la gestion des calculs.  
+:white_check_mark:A. Il **charge les données en mémoire par lots** et optimise la gestion des calculs.  
 B. Il entraîne automatiquement le modèle à chaque batch.  
 C. Il transforme les données en valeurs normalisées.  
 D. Il ajuste les poids du modèle en fonction de la perte.  
@@ -153,7 +153,7 @@ model = NeuralNetwork()
 ### **Question 5**  
 Pourquoi utilisons-nous la fonction d’activation `ReLU()` dans ce modèle ?  
 
-A. Pour rendre le modèle **non linéaire** et capturer des relations complexes.  
+:white_check_mark:A. Pour rendre le modèle **non linéaire** et capturer des relations complexes.  
 B. Pour améliorer la vitesse de convergence du modèle.  
 C. Pour transformer toutes les valeurs négatives en positives.  
 D. Pour réduire le temps d’entraînement.  
@@ -175,7 +175,7 @@ loss_fn = nn.MSELoss()
 ### **Question 6**  
 Pourquoi utilisons-nous `MSELoss()` comme fonction de coût ?  
 
-A. Parce qu’elle est adaptée aux **problèmes de régression**.  
+:white_check_mark:A. Parce qu’elle est adaptée aux **problèmes de régression**.  
 B. Parce qu’elle mesure l’erreur en classification.  
 C. Parce qu’elle corrige automatiquement les erreurs du modèle.  
 D. Parce qu’elle est plus rapide que `CrossEntropyLoss()`.  
@@ -207,21 +207,10 @@ def train_model(dataloader, model, loss_fn, optimizer):
 ### **Question 7**  
 Que fait `optimizer.step()` dans cette fonction d'entraînement ?  
 
-A. **Met à jour les poids** du modèle.  
+:white_check_mark:A. **Met à jour les poids** du modèle.  
 B. Calcule la perte actuelle.  
 C. Réinitialise les gradients.  
 D. Modifie la structure du réseau.  
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## **📝 Partie 8 : Évaluation du Modèle**
@@ -247,7 +236,7 @@ def evaluate_model(dataloader, model, loss_fn):
 ### **Question 8**  
 Pourquoi utilisons-nous `with torch.no_grad()` lors de l’évaluation ?  
 
-A. Pour **désactiver le calcul des gradients** et économiser de la mémoire.  
+:white_check_mark:A. Pour **désactiver le calcul des gradients** et économiser de la mémoire.  
 B. Pour empêcher les données de test d’être modifiées.  
 C. Pour rendre les prédictions plus rapides.  
 D. Pour éviter la mise à jour des poids du modèle.  
@@ -276,7 +265,7 @@ for epoch in range(num_epochs):
 ### **Question 9**  
 Comment pouvons-nous savoir si le modèle **surapprend (overfitting) ?**  
 
-A. Si la **perte d'entraînement est basse** mais que la **perte de test reste élevée**.  
+:white_check_mark:A. Si la **perte d'entraînement est basse** mais que la **perte de test reste élevée**.  
 B. Si la perte de test est plus basse que la perte d’entraînement.  
 C. Si le modèle atteint une précision de 100% après 10 epochs.  
 D. Si la fonction d’activation utilisée est `ReLU()`.  
@@ -304,7 +293,7 @@ plt.show()
 ### **Question 10**  
 Que signifie une **courbe de perte d’entraînement qui diminue mais une courbe de test qui stagne ou augmente** ?  
 
-A. Le modèle est **en overfitting**.  
+:white_check_mark:A. Le modèle est **en overfitting**.  
 B. Le modèle est **sous-entraîné (underfitting)**.  
 C. Le modèle a une bonne généralisation.  
 D. Il faut augmenter le taux d’apprentissage (`learning rate`).  
@@ -331,7 +320,7 @@ for i, (real, pred) in enumerate(zip(y_sample, predictions)):
 ### **Question 11**  
 Pourquoi utilisons-nous `.detach().numpy()` avant d’afficher les prédictions ?  
 
-A. Pour **convertir les tenseurs PyTorch en tableaux NumPy** et faciliter leur affichage.  
+:white_check_mark:A. Pour **convertir les tenseurs PyTorch en tableaux NumPy** et faciliter leur affichage.  
 B. Pour accélérer les calculs.  
 C. Pour sauvegarder les résultats en mémoire.  
 D. Parce que NumPy est plus précis que PyTorch.  
@@ -353,7 +342,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 ### **Question 12**  
 Que se passe-t-il si le taux d’apprentissage (`lr`) est **trop élevé** ?  
 
-A. Le modèle risque **de ne jamais converger** et d’osciller entre différentes valeurs.  
+:white_check_mark:A. Le modèle risque **de ne jamais converger** et d’osciller entre différentes valeurs.  
 B. Le modèle apprendra plus vite et sera plus précis.  
 C. Le modèle prendra plus de temps pour apprendre.  
 D. Le modèle ne pourra jamais faire d’erreur.  
@@ -390,7 +379,7 @@ class DeepNeuralNetwork(nn.Module):
 ### **Question 13**  
 Pourquoi ajouter **plus de couches** dans un réseau de neurones ?  
 
-A. Pour capturer des **relations plus complexes** dans les données.  
+:white_check_mark:A. Pour capturer des **relations plus complexes** dans les données.  
 B. Pour rendre l’entraînement plus rapide.  
 C. Pour éviter complètement le surajustement.  
 D. Pour utiliser plus de mémoire GPU.  
@@ -402,7 +391,7 @@ D. Pour utiliser plus de mémoire GPU.
 ### **Question 14**  
 Quelle **technique** peut aider à **éviter le surajustement** ?  
 
-A. **Ajouter du Dropout** entre les couches cachées.  
+:white_check_mark:A. **Ajouter du Dropout** entre les couches cachées.  
 B. Augmenter la taille du batch (`batch_size`).  
 C. Désactiver `ReLU()`.  
 D. Supprimer l’ensemble de test.  
@@ -417,7 +406,7 @@ Quelle est la **différence** entre une **régression linéaire classique** et u
 A. Un **réseau de neurones** peut **apprendre des relations non linéaires**.  
 B. Une **régression linéaire** est plus rapide mais moins flexible.  
 C. Un **réseau de neurones** fonctionne mieux avec **des données complexes**.  
-D. **Toutes les réponses sont correctes**.  
+:white_check_mark:D. **Toutes les réponses sont correctes**.  
 
 
 
@@ -443,7 +432,7 @@ Quel est **l'impact du choix de la taille des batchs (`batch_size`)** pendant l�
 A. Un **batch size plus grand** permet d’entraîner le modèle **plus rapidement**, mais nécessite **plus de mémoire**.  
 B. Un **batch size plus petit** permet d’avoir **des gradients plus précis**, mais ralentit l’entraînement.  
 C. Un **batch size trop grand** peut faire **diverger** l’optimisation du modèle.  
-D. **Toutes les réponses sont correctes.**  
+:white_check_mark:D. **Toutes les réponses sont correctes.**  
 
 ---
 
@@ -462,7 +451,7 @@ loss_fn = nn.MSELoss()
 ### **Question 17**  
 Pourquoi utilisons-nous **MSELoss (Mean Squared Error)** comme fonction de perte dans ce modèle de régression ?  
 
-A. Parce que c’est une **fonction adaptée aux problèmes de régression** et qu’elle punit les grandes erreurs.  
+:white_check_mark:A. Parce que c’est une **fonction adaptée aux problèmes de régression** et qu’elle punit les grandes erreurs.  
 B. Parce qu’elle **fonctionne mieux avec des classes discrètes**.  
 C. Parce qu’elle force le modèle à **ne prédire que des valeurs positives**.  
 D. Parce qu’elle est plus rapide que `CrossEntropyLoss()`.  
@@ -484,7 +473,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.01)
 ### **Question 18**  
 Pourquoi `Adam` est-il souvent préféré à `SGD` (Stochastic Gradient Descent) ?  
 
-A. Parce qu’il ajuste **automatiquement le taux d’apprentissage** pour chaque paramètre du modèle.  
+:white_check_mark:A. Parce qu’il ajuste **automatiquement le taux d’apprentissage** pour chaque paramètre du modèle.  
 B. Parce qu’il est **moins sensible aux minimas locaux** que `SGD`.  
 C. Parce qu’il converge **plus rapidement** dans la plupart des cas.  
 D. **Toutes les réponses sont correctes.**  
@@ -510,7 +499,7 @@ Si un modèle **ne converge pas** (c'est-à-dire que la perte ne diminue pas), q
 A. **Un taux d’apprentissage (`lr`) trop élevé** qui empêche la convergence.  
 B. **Un manque de données** pour apprendre correctement.  
 C. **Un modèle trop simple** qui ne capture pas bien la relation entre les variables.  
-D. **Toutes les réponses sont correctes.**  
+:white_check_mark:D. **Toutes les réponses sont correctes.**  
 
 ---
 
@@ -529,7 +518,7 @@ torch.save(model.state_dict(), "modele.pth")
 ### **Question 20**  
 Comment peut-on **sauvegarder un modèle entraîné** en PyTorch ?  
 
-A. En utilisant `torch.save(model.state_dict(), "modele.pth")`.  
+:white_check_mark:A. En utilisant `torch.save(model.state_dict(), "modele.pth")`.  
 B. En exportant les poids du modèle avec NumPy.  
 C. En copiant le code source du modèle.  
 D. Il n’est pas possible de sauvegarder un modèle en PyTorch.  
