@@ -26,7 +26,7 @@ Ce segment de code importe **PyTorch**, **NumPy** et **Matplotlib**.
 ### **Question 1**  
 Pourquoi utilisons-nous PyTorch (`torch`) dans ce projet ?  
 
- \_A. Pour manipuler facilement des **matrices et tenseurs** et entraîner des modèles de deep learning. \_  
+:white_check_mark: \_ A. Pour manipuler facilement des **matrices et tenseurs** et entraîner des modèles de deep learning. \_  
 B. Pour améliorer la vitesse d’entraînement d’un modèle scikit-learn.  
 C. Pour générer automatiquement des jeux de données simulées.  
 D. Pour normaliser les variables d’entrée du modèle.  
