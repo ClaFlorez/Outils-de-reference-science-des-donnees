@@ -135,7 +135,9 @@ predictions = model(X_sample).detach().numpy()
 for i, (real, pred) in enumerate(zip(y_sample, predictions)):
     print(f"Sample {i + 1}: Real Value = {real:.2f}, Predicted Value = {pred[0]:.2f}")
 ```
+<img src="graphique.JPG" width="600" alt="Pytorch">
 
+----
 
 ## - Points Clés
 
